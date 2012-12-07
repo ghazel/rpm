@@ -17,5 +17,18 @@ module NewRelic
       end
     end
 
+    def instance_method_visibility(klass, method_name)
+      if klass.private_instance_methods.map{|s|s.to_sym}.include? method_name.to_sym
+        :private
+      elsif klass.protected_instance_methods.map{|s|s.to_sym}.include? method_name.to_sym
+        :protected
+      else
+        :public
+      end
+    end
+
+    def time_to_millis(time)
+      (time.to_f * 1000).round
+    end
   end
 end

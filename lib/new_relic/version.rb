@@ -2,9 +2,9 @@
 module NewRelic
   module VERSION #:nodoc:
     MAJOR = 3
-    MINOR = 4
-    TINY  = 0
-    BUILD = 1 # Set to nil for a release, 'beta1', 'alpha', etc for prerelease builds
+    MINOR = 5
+    TINY  = 3
+    BUILD = nil
     STRING = [MAJOR, MINOR, TINY, BUILD].compact.join('.')
   end
 
